@@ -11,6 +11,7 @@ ODIR = ./obj
 HDIR = ./hex
 
 CFILES = $(wildcard ./src/*.c)
+IFILES = $(wildcard ./include/**/*.c)
 OFILES = $(addprefix ./obj/, $(notdir $(CFILES:.c=.o)))
 HFILES = $(addprefix ./hex/, $(notdir $(CFILES:.c=.hex)))
 
@@ -29,7 +30,7 @@ clean:
 
 ./obj/%.o: ./src/%.c
 	mkdir -p $(ODIR)
-	$(CC) $(CFLAGS) $@ $<	
+	$(CC) $(CFLAGS) $@ $< $(IFILES)	
 
 ./hex/%.hex: ./obj/%.o
 	mkdir -p $(HDIR)

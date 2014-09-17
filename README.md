@@ -20,6 +20,9 @@ Usage: ``make hex``
 ## load
 
 Executes ``hex`` and then uses ``teensy_loader_cli`` to load it onto the Teensy++ 2.0. ``teensy_loader_cli`` must be installed and in your path for this rule to work.
+
+The ``teensy_loader_cli`` program can be found [here](https://www.pjrc.com/teensy/loader_cli.html).
+
 The file to load is selected by overriding the ``MAIN_FILE`` variable. NOTE: Do not include the extension (ie. .c, .hex)
 
 Usage: ``make load MAIN_FILE=part1``

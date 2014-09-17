@@ -1,7 +1,11 @@
 avr-makefile
 ============
 
-A general purpose makefile for building avr programs
+A general purpose makefile for building avr programs.
+
+# Directory Structure
+
+For this makefile to work, you must place it in the root folder of your project. All ``.c`` files should be placed an a directory called ``src``, and all libraries should be placed in a directory called ``include``. The output appears in folders called ``obj`` for object files and ``hex`` for hex files.
 
 # Rules
 
